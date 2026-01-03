@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Entry - Weekly Digest</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo"><a href="index.html" class="logo-link">Weekly Digest</a></h1>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Archive</a>
+                    <a href="add.html" class="nav-link active">Add Entry</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="add-entry-form">
+                <h2 class="hero-title" style="font-size: 40px; text-align: left; margin-bottom: 2rem;">Add Weekly Entry</h2>
+                
+                <form id="entry-form">
+                    <div class="form-group">
+                        <label class="form-label" for="week">Week</label>
+                        <input type="text" id="week" class="form-input" placeholder="Week of January 15, 2024" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="date">Date</label>
+                        <input type="date" id="date" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="title">Title</label>
+                        <input type="text" id="title" class="form-input" placeholder="AI, Design Systems, and Building in Public" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="intro">Introduction</label>
+                        <textarea id="intro" class="form-textarea" placeholder="This week I explored..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Content Items</label>
+                        <div id="content-items-container">
+                            <!-- Content items will be added here -->
+                        </div>
+                        <button type="button" class="add-item-btn" id="add-item-btn">+ Add Content Item</button>
+                    </div>
+
+                    <button type="submit" class="form-button">Generate Entry Code</button>
+                </form>
+
+                <div id="output" style="margin-top: 3rem; display: none;">
+                    <h3 style="font-size: 24px; margin-bottom: 1rem;">Copy this code to blog-data.js:</h3>
+                    <pre id="output-code" style="background-color: #f5f5f7; padding: 1.5rem; border-radius: 8px; overflow-x: auto; font-size: 14px; line-height: 1.6;"></pre>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Weekly Digest</p>
+        </div>
+    </footer>
+
+    <script src="blog-data.js"></script>
+    <script src="add.js"></script>
+</body>
+</html>
+
